@@ -1,0 +1,41 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:leaseflow_test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=PostgreSQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: false
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: false
+
+app:
+  jwt:
+    secret: TestSecretKeyForLeaseFlowUnitAndIntegrationTestsThatIsLongEnough256Bits
+    expiration-ms: 3600000
+  billing:
+    electricity:
+      tier1-limit: 100
+      tier1-rate: 0.10
+      tier2-limit: 300
+      tier2-rate: 0.15
+      tier3-rate: 0.25
+    water:
+      rate-per-unit: 1.50
+      sewerage-charge: 5.00
+    commercial:
+      base-charge: 50.00
+      rate-per-unit: 0.30
+    late-fine-rate: 0.02
+
+logging:
+  level:
+    com.leaseflow: WARN
+    org.springframework.security: WARN
+

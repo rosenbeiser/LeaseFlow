@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LeaseFlow - Smart Property Lease and Utility Billing Management System">
+    <title>LeaseFlow — Smart Property Lease & Utility Billing Management System</title>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.3 CSS (SRI) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons 1.11.3 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Theme & Custom CSS -->
+    <link rel="stylesheet" href="/css/theme.css">
+
+    <!-- Favicon (SVG) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%234f46e5'><path d='M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z'/></svg>">
+</head>
+<body class="bg-body">
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg border-bottom sticky-top bg-body">
+        <div class="container-xl">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4" href="/">
+                <i class="bi bi-building-gear fs-3 text-primary"></i>
+                <span class="letter-spacing-tight">LeaseFlow</span>
+            </a>
+
+            <div class="d-flex align-items-center gap-2 ms-auto">
+                <a href="/app.html#/login" class="btn btn-outline-primary btn-sm px-3">Sign In</a>
+                <a href="/app.html#/register" class="btn btn-primary btn-sm px-3">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-5 py-lg-6 text-center position-relative overflow-hidden" style="background: radial-gradient(circle at 50% 10%, rgba(79, 70, 229, 0.08) 0%, transparent 60%);">
+        <div class="container-xl py-4">
+            <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-2 rounded-pill fw-semibold mb-3">
+                <i class="bi bi-shield-check me-1"></i>Enterprise Property &amp; Utility Billing
+            </span>
+            <h1 class="display-4 fw-extrabold text-body mb-3 mx-auto" style="max-width: 840px; letter-spacing: -0.03em; font-weight: 800;">
+                Smart Property Leases &amp; Automated Progressive Utility Billing
+            </h1>
+            <p class="lead text-muted mx-auto mb-4" style="max-width: 680px;">
+                End manual spreadsheets and dispute-ridden utility billing. LeaseFlow automates strict lifecycle state transitions, progressive tiered energy tariffs, and itemized billing reconciliation.
+            </p>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="/app.html#/register" class="btn btn-primary btn-lg px-4 py-2 fw-semibold">
+                    Get Started Free <i class="bi bi-arrow-right ms-1"></i>
+                </a>
+                <a href="#estimator" class="btn btn-outline-secondary btn-lg px-4 py-2 fw-semibold">
+                    Try Bill Estimator <i class="bi bi-calculator ms-1"></i>
+                </a>
+                <a href="/swagger-ui.html" target="_blank" class="btn btn-light border btn-lg px-4 py-2 fw-semibold text-secondary">
+                    <i class="bi bi-code-slash me-1"></i>REST API Docs
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Architecture / Feature Grid -->
+    <section class="py-5 border-top border-bottom bg-body-tertiary">
+        <div class="container-xl">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">Engineered for Robust Property Operations</h2>
+                <p class="text-muted mx-auto" style="max-width: 540px;">
+                    Built with verified GoF design patterns ensuring rigorous mathematical calculations and invariant enforcement.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 card-hover">
+                        <div class="kpi-icon position-static mb-3 bg-primary-subtle text-primary">
+                            <i class="bi bi-diagram-3 fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">State Pattern Lifecycle</h5>
+                        <p class="text-muted small mb-0">
+                            Guarantees formal transitions: <code>Draft &rarr; Active &rarr; Notice Served &rarr; Terminated &rarr; Settled</code>. Unit occupancy statuses flip automatically, illegal state transitions are rejected with HTTP 409, and complete audit histories are logged.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 card-hover">
+                        <div class="kpi-icon position-static mb-3 bg-info-subtle text-info">
+                            <i class="bi bi-sliders fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Strategy Pattern Tariffs</h5>
+                        <p class="text-muted small mb-0">
+                            Progressive tiered electricity tariffs (100@$0.10, 200@$0.15, 300+@$0.25), flat-rate residential water with sewerage surcharge, and commercial infrastructure base fees calculated with exact <code>HALF_UP</code> precision.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card h-100 p-4 card-hover">
+                        <div class="kpi-icon position-static mb-3 bg-success-subtle text-success">
+                            <i class="bi bi-lock fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold mb-2">Secure by Design</h5>
+                        <p class="text-muted small mb-0">
+                            Stateless JWTs in sessionStorage with BCrypt-12 encryption. Strict backend RBAC enforces data isolation so tenants can never view other residents' statements and landlords access only their own properties.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Utility Bill Estimator Widget -->
+    <section class="py-5" id="estimator">
+        <div class="container-xl">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle px-3 py-1 rounded-pill fw-semibold mb-2">Interactive Tariff Engine</span>
+                    <h2 class="fw-bold mb-3">Live Utility Bill Estimator</h2>
+                    <p class="text-muted mb-4">
+                        Test the real-time billing strategy engine directly. Select a property category and utility service, enter units consumed, and preview the itemized charge calculation.
+                    </p>
+                    <div class="p-3 rounded bg-body-tertiary border mb-3 small">
+                        <div class="fw-bold mb-1"><i class="bi bi-info-circle me-1 text-primary"></i>Configured Tariff Matrix:</div>
+                        <ul class="mb-0 ps-3">
+                            <li><strong>Residential Electricity:</strong> Tier 1 (0-100) @ $0.10, Tier 2 (101-300) @ $0.15, Tier 3 (301+) @ $0.25</li>
+                            <li><strong>Residential Water:</strong> $1.50 per unit + $5.00 fixed sewerage charge</li>
+                            <li><strong>Commercial Utilities:</strong> $50.00 base charge + $0.30 per metered unit</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="card shadow-md p-4 p-md-5">
+                        <h5 class="fw-bold mb-3"><i class="bi bi-calculator me-2 text-primary"></i>Calculate Estimated Charge</h5>
+                        <form id="estimatorForm">
+                            <div class="row g-3 mb-3">
+                                <div class="col-sm-6">
+                                    <label class="form-label fw-semibold">Property Classification</label>
+                                    <select class="form-select" id="estPropType" required>
+                                        <option value="RESIDENTIAL" selected>Residential Property</option>
+                                        <option value="COMMERCIAL">Commercial Property</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="form-label fw-semibold">Utility Service</label>
+                                    <select class="form-select" id="estUtilType" required>
+                                        <option value="ELECTRICITY" selected>Electricity (kWh)</option>
+                                        <option value="WATER">Water (m³)</option>
+                                        <option value="GAS">Gas (Commercial)</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label fw-semibold">Units Consumed</label>
+                                    <div class="input-group">
+                                        <input type="number" step="1" min="0" class="form-control tabular-nums" id="estUnits" value="350" required>
+                                        <span class="input-group-text">Units</span>
+                                        <button class="btn btn-primary px-4 fw-semibold" type="submit" id="estSubmitBtn">Calculate</button>
+                                    </div>
+                                    <div class="form-text small">Try 350 units to verify the canonical $52.50 electricity benchmark!</div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <!-- Live Calculation Result Card -->
+                        <div class="p-3 rounded bg-body-tertiary border mt-2" id="estResultBox">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div>
+                                    <div class="text-muted small">Estimated Utility Charge:</div>
+                                    <h3 class="fw-bold text-primary mb-0 tabular-nums" id="estResultAmount">$52.50</h3>
+                                    <div class="small text-muted mt-1" id="estResultDesc">Tiered progressive slab breakdown applied</div>
+                                </div>
+                                <div class="text-end">
+                                    <span class="badge bg-success-subtle text-success border border-success px-2 py-1" id="estStatusBadge">Verified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Steps -->
+    <section class="py-5 border-top bg-body-tertiary">
+        <div class="container-xl">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-2">How LeaseFlow Operates</h2>
+                <p class="text-muted mx-auto" style="max-width: 520px;">
+                    From move-in to final deposit settlement in 4 structured steps.
+                </p>
+            </div>
+
+            <div class="row g-4 text-center">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-4 bg-body rounded border h-100">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center fw-bold fs-5 mb-3" style="width: 48px; height: 48px;">1</div>
+                        <h6 class="fw-bold mb-2">Properties &amp; Units</h6>
+                        <p class="text-muted small mb-0">Register properties and units with individual occupancy status tracking.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-4 bg-body rounded border h-100">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center fw-bold fs-5 mb-3" style="width: 48px; height: 48px;">2</div>
+                        <h6 class="fw-bold mb-2">State-Driven Leases</h6>
+                        <p class="text-muted small mb-0">Create drafts, activate agreements, serve notices, and audit every transition.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-4 bg-body rounded border h-100">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center fw-bold fs-5 mb-3" style="width: 48px; height: 48px;">3</div>
+                        <h6 class="fw-bold mb-2">Metered Utility Billing</h6>
+                        <p class="text-muted small mb-0">Record meter readings and generate monthly itemized statements in one click.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="p-4 bg-body rounded border h-100">
+                        <div class="rounded-circle bg-primary text-white d-inline-flex align-items-center justify-content-center fw-bold fs-5 mb-3" style="width: 48px; height: 48px;">4</div>
+                        <h6 class="fw-bold mb-2">Payments &amp; Settlement</h6>
+                        <p class="text-muted small mb-0">Tenants pay online; deposit refunds calculate damages and unpaid balances automatically.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top bg-body">
+        <div class="container-xl d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2">
+                <i class="bi bi-building-gear fs-4 text-primary"></i>
+                <span class="fw-bold">LeaseFlow</span>
+                <span class="text-muted small ms-2">&copy; ${new Date().getFullYear()} LeaseFlow System. All rights reserved.</span>
+            </div>
+            <div class="d-flex gap-3 small">
+                <a href="/app.html#/login" class="text-decoration-none text-muted">Portal Sign In</a>
+                <a href="/app.html#/register" class="text-decoration-none text-muted">Register</a>
+                <a href="/swagger-ui.html" target="_blank" class="text-decoration-none text-muted">OpenAPI / Swagger</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5.3.3 JS Bundle (SRI) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Client Script for Estimator Calculation -->
+    <script>
+        function calculateEstimatedCharge(propertyType, utilityType, units) {
+            units = Math.max(0, parseFloat(units) || 0);
+
+            if (propertyType === 'COMMERCIAL') {
+                // Commercial: $50.00 base + $0.30 per unit
+                const charge = 50.00 + (units * 0.30);
+                return {
+                    amount: charge.toFixed(2),
+                    desc: `Commercial Utility: $50.00 base + (${units} × $0.30/unit)`
+                };
+            }
+
+            // RESIDENTIAL
+            if (utilityType === 'ELECTRICITY') {
+                let charge = 0.00;
+                let t1 = Math.min(units, 100);
+                charge += t1 * 0.10;
+
+                if (units > 100) {
+                    let t2 = Math.min(units - 100, 200);
+                    charge += t2 * 0.15;
+                }
+                if (units > 300) {
+                    let t3 = units - 300;
+                    charge += t3 * 0.25;
+                }
+                return {
+                    amount: charge.toFixed(2),
+                    desc: `Tiered Electricity: 100@$0.10 + 200@$0.15 + ${(units > 300 ? units - 300 : 0)}@$0.25`
+                };
+            }
+
+            if (utilityType === 'WATER') {
+                // Water: $1.50 per unit + $5.00 sewerage
+                const charge = (units * 1.50) + 5.00;
+                return {
+                    amount: charge.toFixed(2),
+                    desc: `Flat Rate Water: (${units} × $1.50) + $5.00 sewerage charge`
+                };
+            }
+
+            if (utilityType === 'GAS') {
+                return {
+                    amount: '0.00',
+                    desc: 'Error: GAS billing is only supported for COMMERCIAL properties.',
+                    error: true
+                };
+            }
+        }
+
+        const estForm = document.getElementById('estimatorForm');
+        const estProp = document.getElementById('estPropType');
+        const estUtil = document.getElementById('estUtilType');
+        const estUnits = document.getElementById('estUnits');
+        const resAmount = document.getElementById('estResultAmount');
+        const resDesc = document.getElementById('estResultDesc');
+        const resBadge = document.getElementById('estStatusBadge');
+
+        function runEstimate() {
+            const prop = estProp.value;
+            const util = estUtil.value;
+            const units = parseFloat(estUnits.value) || 0;
+
+            const res = calculateEstimatedCharge(prop, util, units);
+            if (res.error) {
+                resAmount.textContent = 'Unsupported';
+                resAmount.className = 'fw-bold text-danger mb-0 tabular-nums';
+                resDesc.textContent = res.desc;
+                resBadge.className = 'badge bg-danger-subtle text-danger border border-danger px-2 py-1';
+                resBadge.textContent = 'Invalid Combination';
+            } else {
+                resAmount.textContent = '$' + res.amount;
+                resAmount.className = 'fw-bold text-primary mb-0 tabular-nums';
+                resDesc.textContent = res.desc;
+                resBadge.className = 'badge bg-success-subtle text-success border border-success px-2 py-1';
+                resBadge.textContent = 'Verified Tariff';
+            }
+        }
+
+        estForm.onsubmit = (e) => {
+            e.preventDefault();
+            runEstimate();
+        };
+
+        estProp.onchange = runEstimate;
+        estUtil.onchange = runEstimate;
+        estUnits.oninput = runEstimate;
+
+        // Run default estimate on load (350 units -> $52.50)
+        runEstimate();
+    </script>
+</body>
+</html>
